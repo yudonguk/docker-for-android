@@ -20,7 +20,7 @@ ENV ANDROID_SDK /usr/local/android-sdk-linux
 ENV PATH ${ANDROID_HOME}/tools:$ANDROID_HOME/platform-tools:$PATH
 
 # Download and execute NDK
-ENV ANDROID_NDK_DIR android-ndk-r10d
+ENV ANDROID_NDK_DIR android-ndk-r10e
 ENV ANDROID_NDK_URL https://dl.google.com/android/ndk/${ANDROID_NDK_DIR}-linux-x86_64.bin
 RUN wget "${ANDROID_NDK_URL}"
 RUN chmod a+x ${ANDROID_NDK_DIR}-linux-x86_64.bin
@@ -32,7 +32,7 @@ RUN rm -f ${ANDROID_NDK_DIR}-linux-x86_64.bin
 
 # Install Android SDK components
 # License Id: android-sdk-license-ed0d0a5b
-ENV ANDROID_COMPONENTS platform-tools,build-tools-23.0.3,android-23,sys-img-armeabi-v7a-android-23
+ENV ANDROID_COMPONENTS platform-tools,build-tools-23.0.1,android-23
 # License Id: android-sdk-license-5be86d5
 ENV GOOGLE_COMPONENTS extra-android-m2repository,extra-google-m2repository
 
