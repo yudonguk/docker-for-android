@@ -10,7 +10,7 @@ RUN dpkg --add-architecture i386 && \
     apt-get update && \
     apt-get install -yq libc6:i386 libstdc++6:i386 zlib1g:i386 libncurses5:i386 --no-install-recommends && \
     apt-get install -yq build-essential libtool && \
-    apt-get clean
+    apt-get -y upgrade && apt-get autoremove && apt-get clean
 
 # Download and untar SDK
 ENV ANDROID_SDK_URL http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
